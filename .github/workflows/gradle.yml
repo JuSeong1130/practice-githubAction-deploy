@@ -50,7 +50,7 @@ jobs:
     # CodeDeploy에게 배로 명령을 내립니다.
     - name: Code Deploy
       run: >
-        aws deploy create-deployment --application-name githubAction-deploy
+        aws deploy create-deployment --application-name be-pair-23
         --deployment-config-name CodeDeployDefault.AllAtOnce
-        --deployment-group-name githubAction-deploy-group
+        --deployment-group-name be-pair-23-group
         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
