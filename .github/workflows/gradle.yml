@@ -31,6 +31,10 @@ jobs:
       run: chmod +x ./gradlew # (7)
       shell: bash
     
+    - name: build
+      run: ./gradlew clean build
+      shell: bash
+      
     # build한 후 프로젝트를 압축합니다.
     - name: Make zip file
       run: zip -r ./practice-deploy.zip .
