@@ -8,11 +8,11 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ubuntu
-    group: ubuntu
+    owner: ssm-user
+    group: ssm-user
 
 hooks:
   ApplicationStart:
     - location: scripts/deploy.sh
       timeout: 60
-      runas: ubuntu
+      runas: ssm-user
